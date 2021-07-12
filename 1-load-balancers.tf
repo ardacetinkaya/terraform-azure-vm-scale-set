@@ -1,7 +1,7 @@
-resource "azurerm_lb" "load_balancer_01" {
+resource "azurerm_lb" "region_01_load_balancer_01" {
   name                = "load-balancer-01"
-  location            = azurerm_resource_group.azure_demo.location
-  resource_group_name = azurerm_resource_group.azure_demo.name
+  location            = azurerm_resource_group.region_01.location
+  resource_group_name = azurerm_resource_group.region_01.name
   sku                 = "Standard"
 
   frontend_ip_configuration {

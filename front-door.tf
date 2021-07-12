@@ -1,6 +1,6 @@
 resource "azurerm_frontdoor" "frontdoor_01" {
     name                                         = "frontdoor-learn-01"
-    resource_group_name                          = azurerm_resource_group.azure_demo.name
+    resource_group_name                          = azurerm_resource_group.region_01.name
     enforce_backend_pools_certificate_name_check = false
 
     frontend_endpoint {
