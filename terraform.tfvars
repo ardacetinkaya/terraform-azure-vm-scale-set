@@ -1,4 +1,5 @@
 region_01_location                = "westeurope"
+region_02_location                = "northeurope"
 
 # Network
 region_01_virtual_network_01_address_space                = ["10.0.0.0/16"]

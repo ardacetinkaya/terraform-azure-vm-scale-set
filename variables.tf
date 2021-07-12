@@ -33,6 +33,11 @@ variable "region_01_location" {
   description = "Location of resources"
 }
 
+variable "region_02_location" {
+  type        = string
+  description = "Location of resources"
+}
+
 variable "region_01_virtual_network_01_address_space" {
   type        = list
   description = "Address space of virtual network #1"
