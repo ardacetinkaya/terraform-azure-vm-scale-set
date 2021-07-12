@@ -32,3 +32,23 @@ variable "location" {
   type        = string
   description = "Location of resources"
 }
+
+variable "virtual_network_01_address_space" {
+  type        = list
+  description = "Address space of virtual network #1"
+}
+
+variable "virtual_network_01_subnet_01_address_prefixes" {
+  type        = list
+  description = "Address space of virtual network #1's subnet #1"
+}
+
+variable "virtual_network_01_subnet_02_address_prefixes" {
+  type        = list
+  description = "Address space of virtual network #1's subnet #2"
+}
+
+variable "vm_scale_set_01_sku" {
+  type        = string
+  description = "SKU of VM Scale set"
+}

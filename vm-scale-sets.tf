@@ -3,7 +3,7 @@ resource "azurerm_windows_virtual_machine_scale_set" "vm_scale_set_01" {
   name                      = "vm-scale-set-01"
   resource_group_name       = azurerm_resource_group.azure_demo.name
   location                  = azurerm_resource_group.azure_demo.location
-  sku                       = "Standard_B2s"
+  sku                       = var.vm_scale_set_01_sku
   instances                 = 1
   admin_username            = var.admin_username
   admin_password            = var.admin_password
