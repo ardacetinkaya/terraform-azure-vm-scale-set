@@ -4,7 +4,7 @@ resource "azurerm_windows_virtual_machine_scale_set" "region_01_vm_scale_set_01"
   resource_group_name       = azurerm_resource_group.region_01.name
   location                  = azurerm_resource_group.region_01.location
   sku                       = var.region_01_vm_scale_set_01_sku
-  instances                 = 1
+  instances                 = var.region_01_vm_scale_set_01_instances
   admin_username            = var.admin_username
   admin_password            = var.admin_password
   computer_name_prefix      = "vmss01"

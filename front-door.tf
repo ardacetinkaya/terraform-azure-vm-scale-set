@@ -1,11 +1,14 @@
+locals {
+  fd_name = "frontdoor-01-xt34"
+}
 resource "azurerm_frontdoor" "frontdoor_01" {
-    name                                         = "frontdoor-learn-01"
+    name                                         = local.fd_name
     resource_group_name                          = azurerm_resource_group.region_01.name
     enforce_backend_pools_certificate_name_check = false
 
     frontend_endpoint {
-        name      = "frontdoor-learn-01"
-        host_name = "frontdoor-learn-01.azurefd.net"
+        name      = local.fd_name
+        host_name = "${local.fd_name}.azurefd.net"
     }
 
     backend_pool_load_balancing {
@@ -35,7 +38,7 @@ resource "azurerm_frontdoor" "frontdoor_01" {
         name               = "fd-routing-rule-01"
         accepted_protocols = ["Http"]
         patterns_to_match  = ["/*"]
-        frontend_endpoints = ["frontdoor-learn-01"]
+        frontend_endpoints = [local.fd_name]
         forwarding_configuration {
             forwarding_protocol = "MatchRequest"
             backend_pool_name   = "fd-backend-pool-1"

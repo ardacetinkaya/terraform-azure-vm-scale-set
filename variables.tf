@@ -57,3 +57,8 @@ variable "region_01_vm_scale_set_01_sku" {
   type        = string
   description = "SKU of VM Scale set"
 }
+
+variable "region_01_vm_scale_set_01_instances" {
+  type        = number
+  description = "Instance count"
+}
