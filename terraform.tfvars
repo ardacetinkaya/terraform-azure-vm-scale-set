@@ -1,3 +1,11 @@
+#subscription_id           = ""
+#client_id                 = ""
+#client_secret             = ""
+#tenant_id                 = ""
+
+#admin_username            = ""
+#admin_password            = ""
+
 region_01_location                = "westeurope"
 region_02_location                = "northeurope"
 
