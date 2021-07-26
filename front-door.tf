@@ -24,8 +24,15 @@ resource "azurerm_frontdoor" "frontdoor_01" {
     backend_pool {
         name = "fd-backend-pool-1"
         backend {
-            host_header = azurerm_public_ip.public_ip_01.ip_address
-            address     = azurerm_public_ip.public_ip_01.ip_address
+            host_header = azurerm_public_ip.region_01_public_ip_01.ip_address
+            address     = azurerm_public_ip.region_01_public_ip_01.ip_address
+            http_port   = 80
+            https_port  = 443
+        }
+
+        backend {
+            host_header = azurerm_public_ip.region_02_public_ip_01.ip_address
+            address     = azurerm_public_ip.region_02_public_ip_01.ip_address
             http_port   = 80
             https_port  = 443
         }

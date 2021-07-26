@@ -62,3 +62,28 @@ variable "region_01_vm_scale_set_01_instances" {
   type        = number
   description = "Instance count"
 }
+
+variable "region_02_virtual_network_01_address_space" {
+  type        = list
+  description = "Address space of virtual network #1"
+}
+
+variable "region_02_virtual_network_01_subnet_01_address_prefixes" {
+  type        = list
+  description = "Address space of virtual network #1's subnet #1"
+}
+
+variable "region_02_virtual_network_01_subnet_02_address_prefixes" {
+  type        = list
+  description = "Address space of virtual network #1's subnet #2"
+}
+
+variable "region_02_vm_scale_set_01_sku" {
+  type        = string
+  description = "SKU of VM Scale set"
+}
+
+variable "region_02_vm_scale_set_01_instances" {
+  type        = number
+  description = "Instance count"
+}

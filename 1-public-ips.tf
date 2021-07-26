@@ -1,21 +1,21 @@
-resource "azurerm_public_ip" "public_ip_01" {
+resource "azurerm_public_ip" "region_01_public_ip_01" {
   name                = "public-ip-01"
   location            = azurerm_resource_group.region_01.location
   resource_group_name = azurerm_resource_group.region_01.name
   allocation_method   = "Static"
-  domain_name_label   = random_string.fqdn.result
+  domain_name_label   = random_string.region_01_fqdn.result
   sku                 = "Standard"
 
 }
 
-resource "random_string" "fqdn" {
+resource "random_string" "region_01_fqdn" {
   length  = 6
   special = false
   upper   = false
   number  = false
 }
 
-resource "azurerm_public_ip" "public_ip_02" {
+resource "azurerm_public_ip" "region_01_public_ip_02" {
   name                = "public-ip-02"
   location            = azurerm_resource_group.region_01.location
   resource_group_name = azurerm_resource_group.region_01.name
