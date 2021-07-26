@@ -1,4 +1,9 @@
-# terraform-azure-vm-scale-set
+# Azure VM Scale Set with terraform example
+
+Basic _terraform_ codes for Azure VM Scale Set and related resources.
+
+Scenario: Two VM Scale Set instances as backend for Azure Front Door
+
 
 - Get scale set instances' Windows features
 ```
